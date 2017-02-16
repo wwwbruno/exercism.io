@@ -60,6 +60,8 @@ func TestCompareClocks(t *testing.T) {
 		clock2 := New(e.c2.h, e.c2.m)
 		got := clock1 == clock2
 		if got != e.want {
+			t.Logf("Clock1: %d", clock1)
+			t.Logf("Clock2: %d", clock2)
 			t.Log("Clock1:", clock1)
 			t.Log("Clock2:", clock2)
 			t.Logf("Clock1 == Clock2 is %t, want %t", got, e.want)
